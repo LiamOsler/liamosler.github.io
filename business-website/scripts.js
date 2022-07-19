@@ -29,9 +29,7 @@ function appendCol(item, type){
     return div;
 }
 
-
-
-function appendJumbotron(item, title, content, address, mapsLink, phone, fax, hours, ){
+function appendJumbotron(item, title, content, address, mapsLink, phone, fax, hours){
     const div = createDiv();
     div.className = "jumbotron";
 
@@ -62,6 +60,32 @@ function appendJumbotron(item, title, content, address, mapsLink, phone, fax, ho
     return div;
 }
 
+function appendFooter(item, title, content, address, mapsLink, phone, fax, hours, contacts, story){
+    const div = createDiv();
+    div.className = "footer";
+    
+    const container = appendContainer(div);
+    
+    const row = appendRow(container);
+
+    const addressCol = appendCol(row, "col-sm-12 col-xl-4");
+    const addressColTitle = createNode("h4");
+    addressColTitle.textContent = title;
+    addressCol.appendChild(addressColTitle);
+    const footerAddress = createNode("p");
+    footerAddress.innerText = address;
+    addressCol.appendChild(footerAddress);
+
+    const contactCol = appendCol(row, "col-sm-12 col-xl-4");
+    contactCol.innerHTML = contacts;
+
+    const storyCol = appendCol(row, "col-sm-12 col-xl-4");
+    storyCol.innerHTML = story;
+
+    item.appendChild(div);
+    return div;
+}
+
 let previousRoute;
 function route(item){
     if(previousRoute){
@@ -79,7 +103,6 @@ function appendNav(item, names){
     nav.id = "nav-anchor"
     navCol.appendChild(nav);
 
-    
     for(let name of names){
         const navLink = createNode("a");
         navLink.href = "#nav-anchor";
@@ -132,10 +155,7 @@ function appendContent(item, content){
             truckCardBody.innerHTML = `<img src = 'img/${item.img}' class = "card-img"><p>${item.description}</p>`;
             truckCard.appendChild(truckCardBody);
             truckCol.appendChild(truckCard);
-        }
-        
-        console.log(content.trucks);
-        contentCol.insertAdjacentHTML("beforeend", "trucks");
+        } 
     }    
     return contentCol;
 }
@@ -159,7 +179,7 @@ fetchData().then(data => {
     const pageNames = getPageNames(data);
     const body = document.body;
     const container = appendContainer(body);
-    const Jumbotron = appendJumbotron(container, data.name, data.about, data.address, data.mapsLink, data.phone, data.fax,data.hours);
+    const Jumbotron = appendJumbotron(container, data.name, data.about, data.address, data.mapsLink, data.phone, data.fax, data.hours);
     const navRow = appendRow(container);
     const nav = appendNav(navRow, pageNames);
 
@@ -168,8 +188,9 @@ fetchData().then(data => {
         const pageContent = appendContent(contentRow, page);
     }
 
+    const footer = appendFooter(body, data.name, data.about, data.address, data.mapsLink, data.phone, data.fax, data.hours, data.contacts, data.story);
+
     // const col1 = appendCol(row, "col-6");
     // const col2 = appendCol(row, "col-6");
-
 
 });

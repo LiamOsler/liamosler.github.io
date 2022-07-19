@@ -22,6 +22,17 @@
     animation: 1s ease-in 0s 1 fadeIn;
 }
 
+.footer{
+    color: white;
+    background-color: #dc3545;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+.footer a{
+    color: white;
+}
+
 .address{
     text-align: right;
 }

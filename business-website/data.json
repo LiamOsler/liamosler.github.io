@@ -1,11 +1,36 @@
 {
     "name" : "Affiliated Equipment Incorporated",
-    "about" : "Affiliated Equipment is proud of its 25-year history of service to the many Commercial Television Production and Music Video companies operating on all sizes of productions in Toronto. Our goal here at Affiliated Equipment is to be aware of the needs of our customers whatever the situation may call for. Whether you are looking for a camera package, a studio or location shoot package truck, or any variety of specialty products required to make your shoot a success, we hope our website will help you find what you're looking for. If, on the very outside chance you don't see what you need, please give us a call and speak to any one of us. After 25 years, you'd be surprised to find what we have to offer. Besides, knowing what you need is our business so we're always ready to listen.",
+    "about" : "Affiliated Equipment is proud of its 25+ year history of service to the many commercial television and music video companies operating on all sizes of productions in Toronto. Our goal here at Affiliated Equipment is to be aware of the needs of our customers whatever the situation may call for. Whether you are looking for a camera package, a studio or location shoot package truck, or any variety of specialty products required to make your shoot a success, we hope our website will help you find what you're looking for. If, on the very outside chance you don't see what you need, please give us a call and speak to any one of us. After 25 years, you'd be surprised to find what we have to offer. Besides, knowing what you need is our business so we're always ready to listen.",
+    "story" : "<h4>Our story:</h4><p>On January 1, 1997, Affiliated Equipment opened their doors for business and presented their Commercial Television Production customers in Toronto an option that was designed as a complete production solution. The first itself became not just a day but a mission statement that would lead the way for Affiliated Equipment from its modest beginnings over a decade ago, well into the future. Of all the firsts that AE has achieved, there is one that stands above the rest and that is, for better or worse, to always be the equipment rental company that thought like a producer.<h4>Some of our Achievements:</h4></p><p>The first in Toronto to become completely CSA approved.<br>The first in Toronto to offer square wave electronic ballast HMI's on package trucks.<br>The first and only in Toronto to focus their support directly towards the commercial production industry.<br>The first in Toronto to develop and offer 24 hour access pick up/return cages.<br>The first and only in Toronto to establish a double time maximum for package truck drivers.<br>The first in Toronto to make Kino-Flo lights part of truck packages.<br>The first and only in Toronto to provide P.A. personal vehicle and overnight cube van parking.<br>The first in Toronto to offer consistent flat rates on whole equipment truck and camera packages.<br>The first and only in Toronto to expand the truck package to accommodate today's larger productions</p>",
     "address" : "14 Plastics Avenue,\n Toronto, ON,\n M8Z 4B7",
     "mapsLink" : "https://goo.gl/maps/tM7EH4QgWJF35jUn7",
     "phone" : "416-869-3330",
     "fax" : "416-869-1770",
     "hours" : "Monday - Friday 9:00am - 6:00pm",
+    "contacts" : "<h4>Product and quoting enquiries:</h4><p><b>John Sebert</b><br>General Manager<br>416-869-3330 ext. 435<br>416-302-1116 (Cellphone - After Hours)<br><a href='mailto:john@aerentals.ca'>john@aerentals.ca</a></p><p><b>Jason Stangl</b><br>Sales Manager<br>647-267-9876<br><a href='mailto:js@aerentals.ca'>js@aerentals.ca</a></p><h4>For all camera enquiries:</h4><p><b>Peter Parks</b><br>Camera Head<br>416-869-3330 ext. 439<br>647-648-8283 (Cellphone - After Hours)<br><a href='mailto:peter@aerentals.ca'>peter@aerentals.ca</a></p><h4>For all billing/invoicing enquiries:</h4><p><b>Bob Allward</b><br>Billing<br>416-869-3330 ext 434<br><a href='mailto:bob@aerentals.ca'>bob@aerentals.ca</a></p>",
+    "footerItems" : [
+        {
+            "name" : "Home"
+        },
+        {
+            "name" : "About"
+        },
+        {
+            "name" : "Contact"
+        },
+        {
+            "name" : "Products"
+        },
+        {
+            "name" : "Services"
+        },
+        {
+            "name" : "Gallery"
+        },
+        {
+            "name" : "Blog"
+        }
+    ],
     "pages" : [
         {
             "name" : "TRUCKS",
@@ -57,7 +82,8 @@
         {
             "name" : "CAMERAS & LENSES",
             "description" : "",
-            "HTMLcontent" : ""
+            "HTMLcontent" : "",
+            "lenses" : ""
         },
         {
             "name" : "GENERATORS",
