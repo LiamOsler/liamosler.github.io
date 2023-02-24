@@ -59,15 +59,16 @@
         const activateAR = document.body.appendChild( ARButton.createButton( renderer ) );
         renderer.xr.enabled = true;
 
+        let arToggled = false;
         renderer.xr.addEventListener( 'sessionstart', function ( event ) {
-            moleculeGroup.position.z = -20;
+            if(arToggled == false){
+                moleculeGroup.position.z = -20;
+                arToggled = true;
+            }
         } );
-
         renderer.xr.addEventListener( 'sessionend', function ( event ) {
-
         } );
         
-        let arToggled = false;
         renderer.setAnimationLoop( function () {
             renderer.render( scene, camera );
         } );
