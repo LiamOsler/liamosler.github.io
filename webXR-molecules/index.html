@@ -62,12 +62,12 @@
         let arToggled = false;
         renderer.setAnimationLoop( function () {
             renderer.render( scene, camera );
-            if(renderer.xr.isPresenting){
-                if(arToggle == false){
-                    arToggle = true;
-                    moleculeGroup.position.z = -20;
-                }
-            }
+            // if(renderer.xr.isPresenting){
+            //     if(arToggle == false){
+            //         arToggle = true;
+            //         moleculeGroup.position.z = -20;
+            //     }
+            // }
         } );
 
 
