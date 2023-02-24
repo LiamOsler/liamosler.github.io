@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Three JS Molecules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script type="importmap">
         {
             "imports": {
@@ -58,7 +60,7 @@
         renderer.xr.enabled = true;
 
         renderer.setAnimationLoop( function () {
-
+            moleculeGroup.position.z -= 10;
             renderer.render( scene, camera );
 
         } );
@@ -291,7 +293,6 @@
 
         animate();
 
-        window.getMolecule = getMolecule;
 
     </script>
 </body>
