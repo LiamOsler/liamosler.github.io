@@ -59,7 +59,7 @@
         const activateAR = document.body.appendChild( ARButton.createButton( renderer ) );
         renderer.xr.enabled = true;
         
-        arToggled = false;
+        let arToggled = false;
         renderer.setAnimationLoop( function () {
             renderer.render( scene, camera );
             if(renderer.xr.isPresenting){
