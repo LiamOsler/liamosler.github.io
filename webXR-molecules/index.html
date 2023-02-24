@@ -40,8 +40,10 @@
         import { VRButton } from './js/VRButton.js';
         import { ARButton } from './js/ARButton.js';
 
+
         import * as THREE from './js/three.module.js';
         
+
         const clock = new THREE.Clock();
         let deltaTime = 0;
         let totalTime = 0;
@@ -60,9 +62,10 @@
         renderer.setAnimationLoop( function () {
             renderer.render( scene, camera );
             if(renderer.xr.isPresenting){
-                moleculeGroup.scale = 0.01;
+                moleculeGroup.position.z = -20;
             }
-        });
+        } );
+
 
         const controls = new OrbitControls( camera, renderer.domElement );
         
@@ -290,6 +293,7 @@
         init(2424);
 
         animate();
+
 
     </script>
 </body>
