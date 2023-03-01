@@ -59,15 +59,6 @@
         const activateAR = document.body.appendChild( ARButton.createButton( renderer ) );
         renderer.xr.enabled = true;
 
-        let arToggled = false;
-        renderer.xr.addEventListener( 'sessionstart', function ( event ) {
-            if(arToggled == false){
-                moleculeGroup.position.z = -20;
-                arToggled = true;
-            }
-        } );
-        renderer.xr.addEventListener( 'sessionend', function ( event ) {
-        } );
         
         renderer.setAnimationLoop( function () {
             renderer.render( scene, camera );
@@ -75,6 +66,8 @@
 
 
         const controls = new OrbitControls( camera, renderer.domElement );
+        controls.target.set( 0, 0, 10 );
+
         
         let autoRotateX = {
             switch: false
@@ -174,6 +167,8 @@
                 moleculeGroup.add( sphere );
             }
 
+            moleculeGroup.position.z = 10;
+
             scene.add( moleculeGroup );
         }
 
@@ -237,8 +232,7 @@
 
             camera.position.x = 5;
             camera.position.y = 5;
-            camera.position.z = 5;
-            camera.lookAt(0,0,0);
+            camera.position.z = 15;
 
             // const axesHelper = new THREE.AxesHelper( 5 );
             // scene.add( axesHelper );
