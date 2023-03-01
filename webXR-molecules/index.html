@@ -47,6 +47,7 @@
         const clock = new THREE.Clock();
         let deltaTime = 0;
         let totalTime = 0;
+        let centerOffset = -10;
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -66,7 +67,7 @@
 
 
         const controls = new OrbitControls( camera, renderer.domElement );
-        controls.target.set( 0, 0, 10 );
+        controls.target.set( 0, 0, centerOffset );
 
         
         let autoRotateX = {
@@ -167,7 +168,7 @@
                 moleculeGroup.add( sphere );
             }
 
-            moleculeGroup.position.z = 10;
+            moleculeGroup.position.z = centerOffset;
 
             scene.add( moleculeGroup );
         }
@@ -232,7 +233,7 @@
 
             camera.position.x = 5;
             camera.position.y = 5;
-            camera.position.z = 15;
+            camera.position.z = centerOffset - 5;
 
             // const axesHelper = new THREE.AxesHelper( 5 );
             // scene.add( axesHelper );
@@ -294,7 +295,6 @@
         init(2424);
 
         animate();
-
 
     </script>
 </body>
