@@ -203,19 +203,19 @@
                 }).catch(err => {
             });
 
-            // await fetch('./geojson/lakes.json', { cache: "force-cache" }).then(response => {
-            //         return response.json();
-            //     }).then(data => {
-            //         drawGEOJSONPolygons(data, "water");
-            //     }).catch(err => {
-            // });
+            await fetch('./geojson/lakes.json', { cache: "force-cache" }).then(response => {
+                    return response.json();
+                }).then(data => {
+                    drawGEOJSONPolygons(data, "water");
+                }).catch(err => {
+            });
 
-            // await fetch('./geojson/cities.json', { cache: "force-cache" }).then(response => {
-            //         return response.json();
-            //     }).then(data => {
-            //         drawGEOJSONPolygons(data, "habitation");
-            //     }).catch(err => {
-            // });
+            await fetch('./geojson/cities.json', { cache: "force-cache" }).then(response => {
+                    return response.json();
+                }).then(data => {
+                    drawGEOJSONPolygons(data, "habitation");
+                }).catch(err => {
+            });
         }
 
         let selectedList = [];
