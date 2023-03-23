@@ -13,8 +13,8 @@
     <script type="importmap">
         {
             "imports": {
-                "three": "/js/three.module.js",
-                "GLTFLoader": "/js/GLTFLoader.js"
+                "three": "./js/three.module.js",
+                "GLTFLoader": "./js/GLTFLoader.js"
             }
         }
     </script>
@@ -41,9 +41,9 @@
         <div id = "three-area"></div>
     </div>
     <script type= "module">
-        import { OrbitControls } from '/js/OrbitControls.js';
-        import { GLTFLoader } from '/js/GLTFLoader.js';
-        import * as THREE from '/js/three.module.js';
+        import { OrbitControls } from './js/OrbitControls.js';
+        import { GLTFLoader } from './js/GLTFLoader.js';
+        import * as THREE from './js/three.module.js';
 
         const threeBackground = document.getElementById('three-background');
         const threeArea = document.getElementById('three-area');
