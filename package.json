@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "bootstrap": "^5.2.3",
+    "browserify": "^17.0.0",
+    "jquery": "^3.6.4"
+  },
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Liam Osler's Portfolio",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify app.js -o bundle.js"
+  },
+  "author": "Liam Osler",
+  "license": "ISC"
+}

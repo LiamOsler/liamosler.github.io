@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+
+*{
+  font-family: 'Nunito', sans-serif;
+}
+
+.bg-dark{
+  background-color: #000D17 !important;
+}
+
+.text-white{
+  color: #ecbba2 !important;
+}
+
+.text-cyan:link, .text-cyan:visited{
+  color: #82E5ED;
+}
+
+.text-magenta:link, .text-magenta:visited{
+  color: #82E5ED;
+}
+
+.text-yellow:link, .text-yellow:visited{
+  color: #82E5ED;
+
+}
+.text-green:link, .text-green:visited{
+  color: #82E5ED;
+}
+
+
+.nav-link:hover{
+  color: white;
+}
+
+.nav-link:active{
+  color: white;
+}
+
+.text-transition{
+  transition: font-size .2s;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityFull {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.textSlideInFromBottomSlow {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 2s ease-in-out 0s 1 slideInFromBottom, 2s ease-in 0s 1 opacityIn;
+}
+
+.opacityInDelay { 
+  opacity: 0;
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-in-out 2s 1 opacityIn;
+  animation-fill-mode: forwards;
+}
+
+.textSlideInFromBottomFast {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-in-out 0s 1 slideInFromBottom, 1s ease-in 0s 1 opacityIn;
+}
+
+
