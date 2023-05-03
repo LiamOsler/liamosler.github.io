@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Liam Osler</title>
 
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles.css">
@@ -18,9 +18,9 @@
 
   <div class="container">
     <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid text-white textSlideInFromBottomFast ">
+      <div class="container-fluid text-white textSlideInFromBottomFast mt-5 ">
         <div class="d-block d-sm-none mr-4">
-          <a class="text-white text-decoration-none" href="#"><h1 class = "display-3 text-transition">Liam Osler</h1></a>
+          <a class="text-white text-decoration-none" href="#"><h1 style="font-size:15vw" text-transition">Liam Osler</h1></a>
         </div>
         <div class="d-none d-sm-block d-md-none ">
           <a class="text-white text-decoration-none" href="#"><h1 class = "display-1  text-transition">Liam Osler</h1></a>
@@ -34,21 +34,25 @@
         <div class="d-none d-xl-block">
           <a class="text-white text-decoration-none" href="#"><h1 class = "display-1 text-transition">Liam Osler</h1></a>
         </div>
+        <div class="d-block d-sm-none mr-4">
+          <a class="text-white text-decoration-none" href="#">
+            <img class="rounded-circle align-middle img-fluid" alt="avatar" src="img/portrait.webp" /></a>
+        </div>
         
         <ul class="navbar-nav opacityInDelay">
             <li class="nav-item">
               <a class="nav-link text-cyan" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-magenta" href="#portfolio">Portfolio</a>
+              <a class="nav-link text-magenta" href="#code">Code</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-yellow" href="#skills">Skills</a>
+              <a class="nav-link text-magenta" href="#design">Design </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-green" href="#interests">Interests</a>
+              <a class="nav-link text-green" href="#writing ">Writing</a>
             </li>
-          </ul>
+        </ul>
       </div>
     </nav>
   </div>
@@ -56,21 +60,157 @@
   <div class="container">
     <div class="bg-dark text-white rounded-3">
       <div class="container-fluid py-2">
-        <div class = "row">
+        <section class = "row" id = "about">
+          <div class = "col-sm-12 textSlideInFromBottomSlow">
+            <div class="d-none d-sm-block ">
+              <a class="text-white text-decoration-none" href="#">
+                <div class = "rounded-circle img-fluid-container d-flex justify-content-center align-items-center">
+                  <img class="rounded-circle align-middle img-fluid" alt="avatar" src="img/portrait.webp" />
+                </div>
+              </a>
+            </div>
 
-          <div class = "col-sm-8 textSlideInFromBottomSlow">
-            <p class="fs-4 "> I am passionate about creating beautiful and functional websites that meet the needs of clients and users alike. With a focus on user experience and accessibility, I strive to build products that are both visually stunning and easy to use.</p>
+            <h1>About Me</h1>
+
+            <p class="fs-4 "> I am passionate about creating beautiful and functional software that meet the needs of clients and users alike. With a focus on user experience and accessibility, I strive to build products that are both visually stunning and easy to use. I am constantly seeking out new technologies and techniques to improve my skills and stay up-to-date with the latest industry trends. My interests include developing client and server-side web applications, web mapping, digital art and graphic design, land surveying and geomatics, 3D modelling and animation.</p>
+            
+            <h2>Education</h2>
+
+            <div class = "row p-0">
+              <div class = "col-6">
+                <h4 class = "text-cyan"><a href = "http://dal.ca" class = "nav-link text-cyan">Dalhousie University</a></h4>
+                <h5>Halifax, Nova Scotia</h5>
+                <p class = "text-cyan"><a href = "https://www.dal.ca/faculty/computerscience/undergraduate-programs/study-applied-computer-science.html" class = "nav-link text-cyan">Bachelor of Applied Computer Science</a></p>
+              </div>
+              <div class = "col-6">
+                <h4 class = "text-cyan"><a href = "https://www.nscc.ca/campuses/cogs/" class = "nav-link text-cyan">Centre of Geographic Sciences</a></h4>
+                <h5>Lawrencetown, Nova Scotia</h5>
+                <p class = "text-cyan"><a href = "https://www.nscc.ca/programs-and-courses/programs/plandescr.aspx?prg=SUTN&pln=SURVTECH" class = "nav-link text-cyan">Survey Technician Certificate</a></p>
+              </div>
+            </div>
+
+            <h2>Skills</h2>
+            <div class = "row">
+              <div class = "col-6">
+                <p>Programming Languages:</p>
+                <ul>
+                  <li>
+                    JavaScript / TypeScript / Node.js
+                  </li>
+                  <li>
+                    PHP
+                  </li>
+                  <li>
+                    R
+                  </li>
+                  <li>
+                    VBA
+                  </li>
+                  <li>
+                    C / C++
+                  </li>
+                  <li>
+                    Java / Kotlin
+                  </li>
+                </ul>
+
+              </div>
+              <div class = "col-6">
+                <p>Software:</p>
+                <ul>
+                  <li>
+                    Adobe Photoshop, Illustrator and InDesign
+                  </li>
+                  <li>
+                    AutoCAD and Civil 3D, AutoLISP
+                  </li>
+                  <li>
+                    ArcGIS
+                  </li>
+                  <li>
+                    Blender
+                  </li>
+                  <li>
+                    Microsoft Office Suite
+                  </li>
+                  <li>
+                    QGIS
+                  </li>
+                </ul>
+              </div>
+              <div class = "col-6">
+                <p>Databases:</p>
+                <ul>
+                  <li>
+                    SQL (MariaDB, MySQL, PostgreSQL)
+                  </li>
+                  <li>
+                    NoSQL (MongoDB)
+                  </li>
+                </ul>
+              </div>
+              <div class = "col-6">
+                <p>Technologies:</p>
+                <ul>
+                  <li>
+                    SQL (MariaDB, MySQL, PostgreSQL)
+                  </li>
+                  <li>
+                    NoSQL (MongoDB)
+                  </li>
+                </ul>
+              </div>
+              <div class = "col-6">
+                <p>Technologies:</p>
+                <ul>
+                  <li>
+                    SQL (MariaDB, MySQL, PostgreSQL)
+                  </li>
+                  <li>
+                    NoSQL (MongoDB)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
-          <div class = "col-sm-4 textSlideInFromBottomFast">
-            <img class="rounded-circle w-100" alt="avatar1" src="img/portrait.webp" />
+        </section>
+
+        <section class = "row" id = "portfolio">
+          <div class = "col-sm-12 ">
+            <h1>Portfolio</h1>
+        </section>
+
+        <section class = "row" id = "code">
+          <div class = "col-sm-12 ">
+            <h2>Code</h2>
+            <p class="fs-4 "> 
+              This section showcases my latest web development projects, including design and coding skills in HTML, CSS, JavaScript, and more.</p>
+            </div>
+        </section>
+
+        <section class = "row" id = "design">
+          <div class = "col-sm-12 ">
+            <h3>Design</h3>
+            <p class="fs-4 "> 
+              This section showcases my latest web development projects, including design and coding skills in HTML, CSS, JavaScript, and more.</p>
           </div>
-        </div>
+        </section>
+
+        
+        <section class = "row" id = "writing">
+          <div class = "col-sm-12 ">
+            <h3>Writing</h3>
+            <p class="fs-4 "> 
+              This section showcases my latest web development projects, including design and coding skills in HTML, CSS, JavaScript, and more.</p>
+          </div>
+        </section>
 
       </div>
     </div>
   </div>
 </body>
 
-</html>
+<script src = "app.js"></script>
 
 </html>
