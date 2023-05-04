@@ -19,6 +19,56 @@
   shape-outside: circle(50%);
 }
 
+@media (max-width: 575.98px) {
+  .navbar-nav .nav-item .nav-link{
+    float: left;
+    margin-right: .5em;
+
+  }
+
+  .navbar-nav{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1em;
+
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-nav .nav-item .nav-link{
+    float: left;
+    margin-right: .5em;
+
+  }
+
+  .navbar-nav{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1em;
+
+  }
+}
+
+
+@media (max-width: 767.98px) { 
+
+
+}
+
+@media (max-width: 991.98px) {  
+
+}
+
+@media (max-width: 1199.98px) { 
+
+ }
+
+@media (max-width: 1399.98px) { 
+
+ }
+
 h1{
   color: #F8CFB8;
 }
@@ -29,6 +79,14 @@ h2{
 
 p + ul {
   margin-top: -1em;
+}
+
+#skills li{
+  list-style: square;
+}
+
+.social-links{
+  font-size: 2rem;
 }
 
 .text-cyan:link, .text-cyan:visited{
@@ -97,6 +155,8 @@ p + ul {
   animation: 2s ease-in-out 0s 1 slideInFromBottom, 2s ease-in 0s 1 opacityIn;
 }
 
+
+
 .opacityInDelay { 
   opacity: 0;
   /* This section calls the slideInFromLeft animation we defined above */
@@ -107,6 +167,15 @@ p + ul {
 .textSlideInFromBottomFast {  
   /* This section calls the slideInFromLeft animation we defined above */
   animation: 1s ease-in-out 0s 1 slideInFromBottom, 1s ease-in 0s 1 opacityIn;
+}
+
+.hideOverflowAnimation{
+  overflow: hidden;
+}
+
+.delayedFade{
+  animation: 1s ease-in-out 0s 1 opacityFull;
+  animation-fill-mode: forwards;
 }
 
 
