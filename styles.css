@@ -23,29 +23,13 @@
   .navbar-nav .nav-item .nav-link{
     float: left;
     margin-right: .5em;
-
+    font-size: 1.2em;
   }
 
   .navbar-nav{
     width: 100%;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 1em;
-
-  }
-}
-
-@media (max-width: 575.98px) {
-  .navbar-nav .nav-item .nav-link{
-    float: left;
-    margin-right: .5em;
-
-  }
-
-  .navbar-nav{
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 1em;
 
   }
@@ -53,7 +37,6 @@
 
 
 @media (max-width: 767.98px) { 
-
 
 }
 
@@ -63,11 +46,11 @@
 
 @media (max-width: 1199.98px) { 
 
- }
+}
 
 @media (max-width: 1399.98px) { 
 
- }
+}
 
 h1{
   color: #F8CFB8;
@@ -83,6 +66,10 @@ p + ul {
 
 #skills li{
   list-style: square;
+}
+
+.activate{
+  background-color: red;
 }
 
 .social-links{
@@ -116,10 +103,6 @@ p + ul {
 
 .text-transition{
   transition: font-size .2s;
-}
-
-.navbar-nav .nav-item .nav-link{
-  font-size: 1.5rem;
 }
 
 @keyframes slideInFromBottom {
