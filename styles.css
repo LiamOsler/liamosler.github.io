@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
+html{
+  overflow-y: scroll;
+}
+
+body{
+  overflow: hidden;
+}
 
 *{
   font-family: 'Nunito', sans-serif;
@@ -9,21 +16,40 @@
   background-color: #000D17 !important;
 }
 
+.fg-dark{
+  fill: #000D17 !important;
+}
+
 .img-fluid {
   height: 300px;
 }
 .img-fluid-container {
-  height: 350px;
-  width: 350px;
+  height: 310px;
+  width: 310px;
   float: right;
   shape-outside: circle(50%);
+  transform: translateX(10px);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 449.98px) {
   .navbar-nav .nav-item .nav-link{
     float: left;
     margin-right: .5em;
-    font-size: 1.2em;
+  }
+
+  .navbar-nav{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1em;
+
+  }
+}
+
+@media (min-width: 449.99px) and (max-width: 575.98px) {
+  .navbar-nav .nav-item .nav-link{
+    float: left;
+    font-size: large;
   }
 
   .navbar-nav{
@@ -36,20 +62,39 @@
 }
 
 
-@media (max-width: 767.98px) { 
+@media (min-width: 767.99px) and (max-width: 991.98px) {  
+  .navbar-nav .nav-item .nav-link{
+    font-size: large;
 
+  }
 }
 
-@media (max-width: 991.98px) {  
+@media  (min-width: 991.99px) and (max-width: 1199.98px) { 
+  .navbar-nav .nav-item .nav-link{
+    font-size: larger;
+    margin-left: 1em;
 
+  }
 }
 
-@media (max-width: 1199.98px) { 
+@media  (min-width: 1199.98px) and (max-width: 1399.98px) { 
+  .navbar-nav .nav-item .nav-link{
+    font-size: x-large;
+    margin-left: 2em;
 
+  }
 }
 
-@media (max-width: 1399.98px) { 
+@media (min-width: 1399.99px) { 
+  .navbar-nav .nav-item .nav-link{
+    font-size: xx-large;
+    margin-left: 2em;
+  }
+}
 
+
+.page-title{
+  font-weight: 600;
 }
 
 h1{
@@ -57,8 +102,10 @@ h1{
 }
 
 h2{
-  color: #F8CFB8;
+  color: #B58F9F;
 }
+
+
 
 p + ul {
   margin-top: -1em;
@@ -68,16 +115,13 @@ p + ul {
   list-style: square;
 }
 
-.activate{
-  background-color: red;
-}
-
 .social-links{
   font-size: 2rem;
 }
 
 .text-cyan:link, .text-cyan:visited{
   color: #82E5ED;
+  fill: #82E5ED;
 }
 
 .text-magenta:link, .text-magenta:visited{
@@ -86,20 +130,26 @@ p + ul {
 
 .text-yellow:link, .text-yellow:visited{
   color: #82E5ED;
-
 }
+
 .text-green:link, .text-green:visited{
   color: #82E5ED;
 }
 
-
 .nav-link:hover{
   color: white;
+  fill: white;
 }
+
+.nav-link:hover .svg-fill{
+  color: white;
+}
+
 
 .nav-link:active{
   color: white;
 }
+
 
 .text-transition{
   transition: font-size .2s;
@@ -107,7 +157,7 @@ p + ul {
 
 @keyframes slideInFromBottom {
   0% {
-    transform: translateY(100%);
+    transform: translateY(calc(100vh + 100%));
   }
   100% {
     transform: translateY(0);
@@ -132,33 +182,40 @@ p + ul {
   }
 }
 
+.inactive{
+  opacity: 0;
+}
 
-.textSlideInFromBottomSlow {  
-  /* This section calls the slideInFromLeft animation we defined above */
-  animation: 2s ease-in-out 0s 1 slideInFromBottom, 2s ease-in 0s 1 opacityIn;
+.activate{
+  opacity: 1;
+}
+
+.active-transition{
+  transition: all 1s ease-in-out;
 }
 
 
 
 .opacityInDelay { 
   opacity: 0;
-  /* This section calls the slideInFromLeft animation we defined above */
   animation: 1s ease-in-out 2s 1 opacityIn;
   animation-fill-mode: forwards;
 }
 
-.textSlideInFromBottomFast {  
-  /* This section calls the slideInFromLeft animation we defined above */
-  animation: 1s ease-in-out 0s 1 slideInFromBottom, 1s ease-in 0s 1 opacityIn;
+.opacityInContent { 
+  animation: 1s ease-in-out 1s 1 opacityIn;
+  animation-fill-mode: forwards;
+}
+
+.textSlideInFromBottomFast {
+  animation: 1s ease-in-out 0s 1 slideInFromBottom;
+}
+
+.textSlideInFromBottomSlow {  
+  animation: 2s ease-in-out 0s 1 slideInFromBottom;
 }
 
 .hideOverflowAnimation{
   overflow: hidden;
 }
-
-.delayedFade{
-  animation: 1s ease-in-out 0s 1 opacityFull;
-  animation-fill-mode: forwards;
-}
-
 
