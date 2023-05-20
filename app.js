@@ -56,7 +56,29 @@ window.addEventListener('scroll', function(){
     scrollActivate();
 });
 
-window.addEventListener('resize', function(){
-    windowHeight = window.innerHeight;
-    scrollActivate();
-});
+
+
+let gameboyContainer = document.getElementById("gameboyContainer")
+let gameboy = document.getElementById("gameboy")
+let gameboyBody = document.getElementById("mainBodyGameboy")
+let emHeight = parseFloat(getComputedStyle(document.body).fontSize);
+
+console.log(gameboyContainer.offsetWidth, gameboyBody.offsetWidth)
+
+gameboy.style.zoom =  gameboyContainer.offsetWidth / gameboyBody.offsetWidth ;
+
+
+function resize() {
+    gameboy.style.zoom =  gameboyContainer.offsetWidth / (gameboyBody.offsetWidth + emHeight * 2 );
+
+
+
+
+    console.log(gameboyContainer.offsetWidth, gameboyBody.offsetWidth)
+
+}
+
+resize()
+
+window.onresize = resize;
+

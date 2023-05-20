@@ -1,5 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+:root {
+  --color1: #e8f1a6;
+  --color2: #cad670;
+  --color3: #a3c255;
+  --color4: #6fa341;
+  --color5: #498f45;
+  --color6: #387450;
+  --color7: #2d5c56;
+  --color8: #1f3741;
+  --color9: #1e2029;
+  --color10: #16161c;
+
+  --pageBackground : #16161c;
+
+  --lighterGrey: #e6e6e6;
+  --lighterGreyHighlight: #d4d4d4;
+  --lightGrey: #c4bebb;
+  --blueGrey: #a9afb6;
+  --darkGrey: #272929;
+  --darkGreyHighlight: #2c2e2e;
+  --pinkHighlight: #9a2257;
+  --purpleHighlight: #494786;
+  --greenTinge: #cad670;
+  --ledColor: #e00000;
+
+  --contentMaxWidth: 500px;
+
+  --borderRadiusGameboy1: 8px;
+  --borderRadiusGameboy2: 32px;
+  --borderRadiusGameboy3: 6px;
+  --borderRadiusGameboy4: 24px;
+  --borderRadiusGameboy5: 1px;
+
+  --screenHeightGameboy: 144px;
+  --screenWidthGameboy: 160px;
+
+  --bodyHeightGameboy: 482px;
+  --bodyWidthGameboy: 293px;
+
+  --frameHeightGameboy: 20px;
+  --frameCornerWidthGameboy: 20px;
+  --frameLineThicknessGameboy: 3px;
+
+  --bezelMarginGameboy: 10px;
+  --bezelLineThicknessGameboy: 2px;
+  --bezelLineSpacingGameboy: 3px;
+
+  --ledsizeGameboy: 10px;
+  --ledspacingXGameboy: 30px;
+  --ledspacingYGameboy: 25px;
+  --ledpaddingXGameboy: 15px;
+  --ledpaddingYGameboy: 10px;
+
+  --controlRowHeightGameboy: 69px;
+
+--controlRowTopMarginTopGameboy: 40px;
+  --controlRowTopMarginLeftGameboy: 25px;
+  --controlRowTopMarginRightGameboy: 20px;
+
+  --dpadSegmentHeightGameboy: 23px;
+  --dpadRadiusGameboy: 5px;
+
+  --dpadArrowSizeGameboy: 5px;
+  --dpadArrowSpacingGameboy: 4px;
+
+  --buttonAreaWidthGameboy: 60px;
+  --buttonAreaHeightGameboy: 100px;
+  --buttonAreaXTransformGameboy: -30px;
+
+  --buttonRadiusGameboy: 40px;
+  --buttonSpacingGameboy: 5px;
+  --buttonBMarginTopGameboy: 20px;
+
+  --controlRowBottomHeightGameboy: 20px;
+  --controlRowBottomMarginTopGameboy: 30px;
+  --controlRowBottomMarginLeftGameboy: 30px;
+
+  --controlButtonHeightGameboy: 10px;
+  --controlButtonWidthGameboy: 40px;
+}
+
+
 html{
   overflow-y: scroll;
 }
@@ -31,7 +119,25 @@ body{
   transform: translateX(10px);
 }
 
-@media (max-width: 449.98px) {
+
+
+@media (max-width: 217.98px) {
+  .navbar-nav{
+    width: 100%;
+    flex-direction: column;
+    margin-top: 1em;
+  }
+  .navbar-nav .nav-item .nav-link{
+    text-align: center;
+  }
+
+  h1, h2, h3{
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 217.98px) and (max-width: 449.98px) {
   .navbar-nav .nav-item .nav-link{
     float: left;
     margin-right: .5em;
@@ -42,13 +148,19 @@ body{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 1em;
-
+  }
+  .page-title{
+    font-size: 4rem ;
   }
 }
 
+
 @media (min-width: 449.99px) and (max-width: 575.98px) {
+
+  .page-title{
+    font-size: 4rem !important;
+  }
   .navbar-nav .nav-item .nav-link{
-    float: left;
     font-size: large;
   }
 
@@ -60,7 +172,6 @@ body{
 
   }
 }
-
 
 @media (min-width: 767.99px) and (max-width: 991.98px) {  
   .navbar-nav .nav-item .nav-link{
@@ -95,17 +206,26 @@ body{
 
 .page-title{
   font-weight: 600;
+  color: #c02b6e;
+
 }
 
 h1{
-  color: #F8CFB8;
+  color: #82E5ED;
 }
 
 h2{
-  color: #B58F9F;
+  color: #c02b6e;
 }
 
+h3{
+  color: #c02b6e;
+  font-size: unset;
+}
 
+.text-white{
+  color: #E5E5E5
+}
 
 p + ul {
   margin-top: -1em;
@@ -218,4 +338,386 @@ p + ul {
 .hideOverflowAnimation{
   overflow: hidden;
 }
+
+
+
+
+#mainBodyGameboy{
+  height: var(--bodyHeightGameboy);
+  width: var(--bodyWidthGameboy);
+
+  background-color: var(--lighterGrey);
+  border-radius: var(--borderRadiusGameboy1) var(--borderRadiusGameboy1) var(--borderRadiusGameboy2) var(--borderRadiusGameboy1);
+
+display: block;
+}
+
+#topFrame{
+  height: var(--frameHeightGameboy);
+  border-bottom:  var(--frameLineThicknessGameboy) solid var(--lightGrey);
+  display: flex;
+}
+
+#topFrameLeft{
+  width: var(--frameCornerWidthGameboy);
+  height: 100%;
+  border-right: var(--frameLineThicknessGameboy) solid var(--lightGrey);
+  border-bottom: var(--frameLineThicknessGameboy) solid var(--lightGrey);
+}
+
+#topFrameMiddle{
+  width: calc(var(--bodyWidthGameboy) - (var(--frameCornerWidthGameboy) * 2));
+}
+
+#topFrameRight{
+  width: var(--frameCornerWidthGameboy);
+  height: 100%;
+  border-left: var(--frameLineThicknessGameboy) solid var(--lightGrey);
+  border-bottom: var(--frameLineThicknessGameboy) solid var(--lightGrey);
+  align-self: right;
+}
+
+#bezelGameboy{
+  background-color: var(--blueGrey);
+  border-radius: var(--borderRadiusGameboy3) var(--borderRadiusGameboy3) var(--borderRadiusGameboy4) var(--borderRadiusGameboy3);
+  margin: var(--frameHeightGameboy);
+  padding-bottom: var(--frameHeightGameboy);
+}
+
+#bezelLinesGameboy{
+  padding: var(--bezelMarginGameboy) var(--bezelMarginGameboy);
+}
+
+.bezelLineGameboy{
+  height: var(--bezelLineThicknessGameboy);
+}
+
+#bezelLine1Gameboy{
+  background-color: var(--pinkHighlight);
+  margin-bottom: var(--bezelLineSpacingGameboy);
+}
+
+#bezelLine2Gameboy{
+  background-color: var(--purpleHighlight);
+}
+
+#screenGameboy{
+  height: var(--screenHeightGameboy);
+  width: var(--screenWidthGameboy);
+  background-color: var(--greenTinge);
+  border-radius: var(--borderRadiusGameboy);
+}
+
+#bezelRowGameboy{
+  display: flex;
+}
+
+#ledWrapperGameboy{
+  padding: var(--ledspacingXGameboy) var(--ledspacingYGameboy) var(--ledpaddingXGameboy) var(--ledpaddingYGameboy);
+}
+
+#ledGameboy{
+  height: var(--ledsizeGameboy);
+  width: var(--ledsizeGameboy);
+  background-color: var(--ledColor);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#controlRowTopGameboy{
+margin-top: var(--controlRowTopMarginTopGameboy);
+  margin-left: var(--controlRowTopMarginLeftGameboy);
+  margin-right: var(--controlRowTopMarginRightGameboy);
+
+}
+
+#dpadAreaBlock{
+  height: var(--controlRowHeightGameboy);
+  width: var(--controlRowHeightGameboy);
+  display: inline-block;
+  vertical-align: top;
+}
+
+#dpadAreaGameboy{
+  display: inline-block;
+}
+
+#dpadGameboy{
+  height: var(--controlRowHeightGameboy);
+  width: var(--controlRowHeightGameboy);
+  display: flex;
+  flex-flow: wrap;
+}
+
+.dpadSegment{
+  height: var(--dpadSegmentHeightGameboy);
+  width: var(--dpadSegmentHeightGameboy);
+  background-color: var(--darkGrey);
+}
+
+.dpadBreak{
+  flex-basis: 100%;
+  height: 0;
+}
+
+#dpadUpGameboy{
+  margin: 0 auto;
+  border-radius: var(--dpadRadiusGameboy) var(--dpadRadiusGameboy) 0 0;
+}
+
+#dpadLeftGameboy{
+  border-radius: var(--dpadRadiusGameboy) 0 0 var(--dpadRadiusGameboy);
+}
+
+#dpadCentreGameboy{
+}
+
+#dpadCentreCircle{
+  height: var(--dpadSegmentHeightGameboy);
+  width: var(--dpadSegmentHeightGameboy);
+  background-color: var(--darkGreyHighlight);
+  border-radius: 50%;
+  margin: auto;
+}
+
+#dpadRightGameboy{
+  border-radius: 0 var(--dpadRadiusGameboy) var(--dpadRadiusGameboy) 0;
+}
+
+#dpadDownGameboy{
+  border-radius: 0 0 var(--dpadRadiusGameboy) var(--dpadRadiusGameboy);
+  margin: 0 auto;
+}
+
+#dpadAreaTopIndicator{
+width: calc(var(--dpadArrowSizeGameboy) * 2 + var(--dpadArrowSpacingGameboy) * 2 + var(--controlRowHeightGameboy) + 3px);
+}
+
+#dpadAreaLeftIndicator{
+height: var(--controlRowHeightGameboy);
+  display: inline-block;
+  width: var(--dpadArrowSizeGameboy);
+}
+
+#dpadAreaRightIndicator{
+height: var(--controlRowHeightGameboy);
+  display: inline-block;
+  width: var(--dpadArrowSizeGameboy);
+}
+
+#dpadAreaDownIndicator{
+width: calc(var(--dpadArrowSizeGameboy) * 2 + var(--dpadArrowSpacingGameboy) * 2 + var(--controlRowHeightGameboy) + var(--dpadArrowSpacingGameboy));
+}
+
+#dpadAreaUpArrow{
+width: 0; 
+height: 0; 
+border-left: var(--dpadArrowSizeGameboy) solid transparent;
+border-right:  var(--dpadArrowSizeGameboy) solid transparent;
+  border-bottom: var(--dpadArrowSizeGameboy) solid var(--lightGrey);
+  transform: translateX(calc(var(--controlRowHeightGameboy) / 2 + var(--dpadArrowSpacingGameboy)));
+  margin-bottom: var(--dpadArrowSpacingGameboy);
+}
+
+#dpadAreaLeftArrow{
+width: 0; 
+height: 0; 
+border-top: var(--dpadArrowSizeGameboy) solid transparent;
+border-bottom:  var(--dpadArrowSizeGameboy) solid transparent;
+  border-right: var(--dpadArrowSizeGameboy) solid var(--lightGrey);
+  transform: translateY(calc(var(--controlRowHeightGameboy) / 2 - var(--dpadArrowSizeGameboy)));
+}
+
+#dpadAreaRightArrow{
+width: 0; 
+height: 0; 
+border-top: var(--dpadArrowSizeGameboy) solid transparent;
+border-bottom:  var(--dpadArrowSizeGameboy) solid transparent;
+  border-left: var(--dpadArrowSizeGameboy) solid var(--lightGrey);
+  transform: translateY(calc(var(--controlRowHeightGameboy) / 2 - var(--dpadArrowSizeGameboy)));
+}
+
+#dpadAreaDownArrow{
+width: 0; 
+height: 0; 
+border-left: var(--dpadArrowSizeGameboy) solid transparent;
+border-right:  var(--dpadArrowSizeGameboy) solid transparent;
+  border-top: var(--dpadArrowSizeGameboy) solid var(--lightGrey);
+  transform: translateX(calc(var(--controlRowHeightGameboy) / 2 + var(--dpadArrowSpacingGameboy)));
+}
+
+#buttonAreaGameboy{
+  display: inline-block;
+  float: right;
+}
+
+.circleButtonGameboy{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--buttonSpacingGameboy);
+  margin-top: var(--buttonSpacingGameboy);
+  height: var(--buttonRadiusGameboy);
+  width: var(--buttonRadiusGameboy);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-60deg);
+}
+
+#buttonAreaA{
+  background-color: var(--purpleHighlight);
+}
+
+#buttonAreaB{
+  margin-top: var(--buttonBMarginTopGameboy);
+  background-color: var(--pinkHighlight);
+}
+
+.buttonTextGameboy{
+  font-size: var(--buttonTextSizeGameboy);
+  color: var(--lightGrey);
+  opacity: 0.1;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+#buttonAreaBackground{
+  width: var(--buttonAreaWidthGameboy);
+  border-radius : var(--controlRowHeightGameboy);
+  background-color: var(--lighterGreyHighlight);
+  transform: rotate(60deg) translate(var(--buttonAreaXTransformGameboy), var(--buttonSpacingGameboy));
+  padding-top: var(--buttonSpacingGameboy);
+  padding-bottom: var(--buttonSpacingGameboy);
+}
+
+#controlRowBottomGameboy{
+  width: var(--bodyWidthGameboy);
+  margin-top: var(--controlRowBottomMarginTopGameboy);
+}
+
+#controlButtonAreaBackground{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#controlButtonArea{
+  height: var(--controlRowBottomHeightGameboy);
+  width: var(--controlButtonAreaWidthGameboy);
+  margin-right: 30px;
+}
+
+#controlButtonAreaSelect{
+  text-align: center;
+}
+
+.controlButtonGameboy{
+  display: inline-block;
+  float: center;
+  margin-left: 10px;
+  transform: rotate(-30deg);
+}
+
+.controlButton{
+  height: var(--controlButtonHeightGameboy);
+  width: var(--controlButtonWidthGameboy);
+  border-radius: var(--controlButtonRadiusGameboy);
+  background-color: var(--darkGreyHighlight);
+  margin: var(--controlButtonMarginGameboy);
+  border-radius: var(--controlButtonHeightGameboy);
+}
+
+.controlButtonText{
+  text-align: center;
+  color: var(--purpleHighlight);
+  font-size: x-small;
+}
+
+#controlButtonAreaStart{
+  margin-right: var(--controlButtonAreaMarginRightGameboy);
+}
+
+
+#screenWrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#canvasGameboy{
+  position: absolute;
+}
+
+#screenTextGameboy{
+  width: 100%;
+
+  animation-name: textVisibility;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+#screenFlash{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  animation-name: blackFlash;
+  animation-duration: 2.1s;
+  animation-delay: 0s;
+  transform: scaleY(0);
+}
+
+@keyframes blackFlash {
+  0%   {transform: scaleY(100%);}
+  50%  {background-color: black;}
+  100% {background-color: black;}
+}
+
+
+#screenTextGameboy p{
+  height: 100%;
+  width: 100%;
+  font-size: smaller;
+  position: absolute;
+  top: 0;
+  font-family: 'Press Start 2P', cursive;
+
+  animation-name: textDrop;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  top: calc(var(--screenHeightGameboy) / 2);
+
+}
+
+@keyframes textVisibility {
+  0%   {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+@keyframes textDrop {
+  0%   {left:0px; top:0px;}
+  100% {left:0px; top:calc(var(--screenHeightGameboy) / 2);}
+}
+
+#contentRow{
+  margin-top: 1em;
+}
+
+
+#sideContentSocial{
+  margin-top: 1em;
+}
+
+.socialIcon{
+  display: inline-block;
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  background-color: var(--lightGrey);
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
 
