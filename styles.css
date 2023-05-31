@@ -119,9 +119,18 @@ body{
   transform: translateX(10px);
 }
 
-
+.page-title{
+  font-size: 5em;
+  font-weight: 600;
+  color: #c02b6e;
+}
 
 @media (max-width: 217.98px) {
+  .page-title{
+    font-size: 4rem !important;
+  }
+
+  
   .navbar-nav{
     width: 100%;
     flex-direction: column;
@@ -138,6 +147,10 @@ body{
 
 
 @media (min-width: 217.98px) and (max-width: 449.98px) {
+  .page-title{
+    font-size: 4rem !important;
+  }
+
   .navbar-nav .nav-item .nav-link{
     float: left;
     margin-right: .5em;
@@ -149,17 +162,15 @@ body{
     justify-content: space-between;
     margin-top: 1em;
   }
-  .page-title{
-    font-size: 4rem ;
-  }
 }
 
 
 @media (min-width: 449.99px) and (max-width: 575.98px) {
 
   .page-title{
-    font-size: 4rem !important;
+    font-size: 6rem !important;
   }
+
   .navbar-nav .nav-item .nav-link{
     font-size: large;
   }
@@ -174,13 +185,18 @@ body{
 }
 
 @media (min-width: 767.99px) and (max-width: 991.98px) {  
+  .page-title{
+      font-size: 6rem ;
+    }
   .navbar-nav .nav-item .nav-link{
     font-size: large;
-
   }
 }
 
 @media  (min-width: 991.99px) and (max-width: 1199.98px) { 
+  .page-title{
+    font-size: 6rem !important;
+  }
   .navbar-nav .nav-item .nav-link{
     font-size: larger;
     margin-left: 1em;
@@ -189,6 +205,9 @@ body{
 }
 
 @media  (min-width: 1199.98px) and (max-width: 1399.98px) { 
+  .page-title{
+    font-size: 6rem !important;
+  }
   .navbar-nav .nav-item .nav-link{
     font-size: x-large;
     margin-left: 2em;
@@ -197,6 +216,9 @@ body{
 }
 
 @media (min-width: 1399.99px) { 
+  .page-title{
+    font-size: 5rem !important;
+  }
   .navbar-nav .nav-item .nav-link{
     font-size: xx-large;
     margin-left: 2em;
@@ -204,11 +226,6 @@ body{
 }
 
 
-.page-title{
-  font-weight: 600;
-  color: #c02b6e;
-
-}
 
 h1{
   color: #82E5ED;
@@ -225,6 +242,10 @@ h3{
 
 .text-white{
   color: #E5E5E5
+}
+
+.card.bg-dark{
+  background-color: #11050C !important;
 }
 
 p + ul {

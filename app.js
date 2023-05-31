@@ -65,17 +65,11 @@ let emHeight = parseFloat(getComputedStyle(document.body).fontSize);
 
 console.log(gameboyContainer.offsetWidth, gameboyBody.offsetWidth)
 
-gameboy.style.zoom =  gameboyContainer.offsetWidth / gameboyBody.offsetWidth ;
+gameboy.style.zoom =  gameboyContainer.offsetWidth / (gameboyBody.offsetWidth + emHeight * 2 );;
 
 
 function resize() {
     gameboy.style.zoom =  gameboyContainer.offsetWidth / (gameboyBody.offsetWidth + emHeight * 2 );
-
-
-
-
-    console.log(gameboyContainer.offsetWidth, gameboyBody.offsetWidth)
-
 }
 
 resize()
