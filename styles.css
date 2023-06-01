@@ -228,16 +228,24 @@ body{
 
 
 h1{
+  color: #eb3486;
+}
+
+h1 .text-cyan{
   color: #82E5ED;
 }
 
 h2{
-  color: #c02b6e;
+  color: #82E5ED;
 }
 
 h3{
-  color: #c02b6e;
+  color: #E5E5E5;
   font-size: unset;
+}
+
+.text-cyan{
+  color: #82E5ED;
 }
 
 .text-white{
@@ -259,6 +267,7 @@ p + ul {
 .social-links{
   font-size: 2rem;
 }
+
 
 .text-cyan:link, .text-cyan:visited{
   color: #82E5ED;
