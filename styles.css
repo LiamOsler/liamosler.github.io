@@ -92,8 +92,9 @@ html{
   overflow-y: scroll;
 }
 
-body{
+h1{
   overflow: hidden;
+  /* hyphens: auto !important; */
 }
 
 *{
@@ -252,9 +253,21 @@ h3{
   color: #E5E5E5
 }
 
-.card.bg-dark{
-  background-color: #11050C !important;
+.card{
+  height: 100%;
+  border-color: #c02b6e;
 }
+
+.card.bg-dark{
+  background-color:  #000a12 !important;
+}
+
+.card-footer{
+  padding-bottom: 1em !important;
+}
+
+
+
 
 p + ul {
   margin-top: -1em;
@@ -301,9 +314,9 @@ p + ul {
 }
 
 
-.text-transition{
+/* .text-transition{
   transition: font-size .2s;
-}
+} */
 
 @keyframes slideInFromBottom {
   0% {
@@ -341,7 +354,7 @@ p + ul {
 }
 
 .active-transition{
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 
