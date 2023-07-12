@@ -1,0 +1,398 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s ease;
+}
+
+h1, h2, h3{
+    color: #366083;
+    line-height: 1.5em;
+}
+h1 mark{
+    color: #F8A452;
+    background-color: #366083;
+}
+h2 mark{
+    color: #366083;
+    background-color: #F8A452;
+    padding: 0 5px;
+}
+
+p{
+    color: #162735;
+}
+
+ul li{
+    color: #366083;
+    font-size: 3em;
+}
+
+.headline-1{
+    color: #F8A452;
+    font-size: 8rem;
+    display: inline-block;
+    margin: 0;
+}
+
+.headline-2{
+    font-size: 4rem;
+    margin-bottom: 0em;
+}
+
+.logo{
+    max-width: calc(100% - 1em);
+    margin: 1em;
+    display: inline-block;
+    float: right;
+}
+
+
+.container{
+    position: absolute;
+    background-color: #F8A452;
+    transition: all 0.5s ease;
+}
+
+.background{
+    position: fixed;
+    z-index: 1;
+}
+
+.map-container{
+    height: 2000px;
+    width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.raster-container{
+    height: 2000px;
+    width: 2000px;
+    position: absolute;
+}
+
+.vector-container{
+    height: 2000px;
+    width: 2000px;
+    position: absolute;
+}
+
+.label-container{
+    height: 2000px;
+    width: 2000px;
+    position: absolute;
+}
+
+.label-wrapper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.label{
+    color: #F8A452;
+    background-color: #366083;
+    font-weight: bolder;
+    transition: all 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    padding: .5em;
+}
+.business-label{
+    margin-right: .5em;
+}
+
+#business-legend-label{
+    color: #366083;
+    background-color: rgba(255,255,255,.7);
+    font-weight: bolder;
+    font-size: xx-large;
+    transition: all 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    padding: .5em;
+    top: 700px;
+    left: 850px;
+    display: flex;
+    align-items: center;
+}
+
+#business-legend-point{
+    height: .5em;
+    width: .5em;
+    border-radius: 50%;
+    background-color: #366083;
+    border: solid #F8A452;
+    border-width: .25em;
+}
+
+.legend-item{
+    margin-bottom: 100vh;
+    padding: 1em;
+    display: flex;    
+    align-items: center;
+    background-color: rgba(255,255,255,.7);
+
+}
+
+.legend-color{
+    height: 10vh;
+    width: 10vw;
+}
+
+#legend-item-1{
+    background-color: #F69E75;
+}
+#legend-item-2{
+    background-color: #E8403E;
+}
+#legend-item-3{
+    background-color: #A21A5B;
+}
+#legend-item-4{
+    background-color: #4C1D4B;
+}
+
+
+.legend-text{
+    margin-left: .5em;
+    font-size: 4em;
+    color: #366083;
+}
+
+
+#proposed-location-label{
+    color: #366083;
+    background-color: #F8A452;
+    background-blend-mode: multiply;
+    top: 975px;
+    left: 950px;
+}
+
+#road-label-1{
+    top: 900px;
+    left: 1150px;
+}
+
+#road-label-2{
+    top: 900px;
+    left: 800px;
+}
+
+#road-label-3{
+    top: 1100px;
+    left: 1100px;
+}
+
+#water-label-1{
+    top: 1150px;
+    left: 800px;
+}
+
+.fade-in{
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out{
+    animation: fadeOut 1s ease-in forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.raster{
+    height: 2000px;
+    width: 2000px;
+    /* filter: blur(2px); */
+}
+
+
+.vector{
+    width: 2000px;
+    height: 2000px;
+    /* opacity: .1; */
+    transition: 1s all ease-in-out;
+    opacity: 1;
+}
+
+.foreground{
+    position: fixed;
+    z-index: 2;
+    overflow-y: scroll;
+}
+
+.foreground-content{
+    position: relative;
+}
+
+.card{
+    background-color: rgba(255,255,255,.7);
+    padding: 1em 2em;
+    padding-bottom: 4em;
+    margin-bottom: 4em;
+}
+
+.background-yellow{
+    background-color: #F8A452;
+}
+
+.background-blue{
+    background-color: #366083;
+}
+
+.background-blue h1 mark, .background-blue h2 mark, .background-blue h3 mark{
+    background-color: #F8A452;
+    color: #366083;
+}
+
+.background-blue ul li{
+    color: #F8A452;
+}
+
+/* Semantic classes: */
+.full-height{
+    height: 100vh;
+}
+
+.triple-height{
+    height: 300vh;
+}
+
+.full-min-height{
+    min-height: 100vh;
+}
+
+.full-width{
+    width: 100vw;
+}
+
+.transparent{
+    opacity: 0;
+}
+
+.opaque{
+    opacity: 1;
+}
+
+
+/* svg classes: */
+#proposed{
+    stroke: #F8A452;
+    stroke-width: .1em;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+}
+
+#walk-250{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+#walk-500{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+#walk-1000{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+#walk-1500{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+#buildings{
+    opacity: 0;
+}
+
+#business{
+    opacity: 0;
+}
+
+#business-legend-label{
+    opacity: 0;
+}
+
+.business-point{
+    fill: #366083;
+    stroke: #F8A452;
+    stroke-width: .5em;
+}
+
+#travelway-road{
+    stroke-width: .3em;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+}
+
+#travelway-path{
+    stroke-width: .1em;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+}
+
+#waterbody{
+    opacity: 0;
+    stroke-width: .1em;
+    fill: #366083;
+    stroke: #579ACE;
+    transition: all .5s ease;
+}
+
+.animate-line-show{
+    animation: dashForward 5s ease forwards;
+}
+
+@keyframes dashForward {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+#map{
+    transform: translate(calc((100vw / 2) - 1000px), calc((100vh / 2) - 1000px));
+    transition: all 1s ease-in-out;
+}
+
+#map-png{
+    transition: all 1s ease-in-out;
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .headline-1{
+        font-size: 4rem;
+    }
+    .headline-2{
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 992px) {
+
+}
+@media only screen and (min-width: 1200px) {
+
+}
